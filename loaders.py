@@ -49,6 +49,8 @@ class Game:
             if not round_active:
                 return
 
+            # print(msg) # Updates every 8 ticks?
+
             # Save from their player state to ours
             for o_pl, th_pl in zip(self.m_rounds[-1].players, s_players):
                 spotted = th_pl.get_prop('DT_BaseEntity', 'm_bSpotted')
