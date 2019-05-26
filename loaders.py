@@ -18,6 +18,9 @@ class Person:
     def add_position(self, pos, spotted):
         self.states.append((pos, spotted, self.is_dead))
 
+    def die(self):
+        self.is_dead = True
+
 
 #Encapsulates parsed information from DEM file about each round, no interesting processing is conducted here.
 class Round:
@@ -99,7 +102,7 @@ class Game:
                 # Find player index
                 for p in self.m_rounds[-1].players:
                     if p.m_name == victim.name:
-                        p.is_dead = True
+                        p.die()
 
 
 

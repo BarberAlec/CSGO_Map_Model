@@ -3,6 +3,7 @@ import os
 import skimage.io as io
 import skimage.transform as trans
 import numpy as np
+import keras
 from keras.models import *
 from keras.layers import *
 from keras.optimizers import *
@@ -26,6 +27,7 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
     drop4 = Dropout(0.5)(conv4)
     pool4 = MaxPooling2D(pool_size=(2, 2))(drop4)
 
+    # Possibly remove this..?
     conv5 = Conv2D(1024, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(pool4)
     conv5 = Conv2D(1024, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv5)
     drop5 = Dropout(0.5)(conv5)
@@ -50,7 +52,9 @@ def unet(pretrained_weights = None,input_size = (256,256,1)):
     conv9 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(merge9)
     conv9 = Conv2D(64, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv9)
     conv9 = Conv2D(2, 3, activation = 'relu', padding = 'same', kernel_initializer = 'he_normal')(conv9)
-    conv10 = Conv2D(1, 1, activation = 'sigmoid')(conv9)
+    # conv10 = Conv2D(1, 1, activation = 'sigmoid')(conv9)
+    # Edited by me
+    conv10 = Conv2D(10, 1, activation = 'sigmoid')(conv9)
 
     model = Model(input = inputs, output = conv10)
 
