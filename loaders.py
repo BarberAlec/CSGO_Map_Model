@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import os
 from demoparser.demofile import DemoFile
 import matplotlib.pyplot as plt
 import time
@@ -29,15 +30,13 @@ class Round:
 
 # Dumb queriable wrapper for games.
 class Game:
-    def __init__(self, game_id):
+    def __init__(self, game_id, data):
         self.current_frame = 0
         print("Loading game", game_id)
         # TODO: Use game_id to determine file
 
-        #Open and extract DEM file
-        data = open("deRust.dem", 'rb').read()
+        #Extract DEM file data
         d = DemoFile(data)
-        outFile = open('out.txt', 'w+')
 
 
         current_round = 0
@@ -68,6 +67,10 @@ class Game:
             round_active = True
            
             print("Round ", current_round)
+            
+            #If previous round never ended with a round_end event, it was probably not a real round
+            if self.m_rounds and self.m_rounds[-1].m_rid == current_round:
+                del self.m_rounds[-1]
             self.m_rounds.append(Round(current_round))
 
             #In professional matches, there are sometimes players that have no team or are spectators
@@ -80,7 +83,6 @@ class Game:
             # Generate our players
             players = [Person(p.name, p.team.name) for p in s_players]
             # And add to round
-            # [self.m_rounds[-1].add_player(p) for p in players]
             self.m_rounds[-1].players = players
 
 
@@ -92,7 +94,6 @@ class Game:
             current_round += 1
 
         def death(event, msg):
-            #Stolen bit of code, left in unused features...
             for idx, key in enumerate(event['event'].keys):
                 if key.name == 'userid':
                     user_id = msg.keys[idx].val_short
@@ -103,11 +104,6 @@ class Game:
                 for p in self.m_rounds[-1].players:
                     if p.m_name == victim.name:
                         p.die()
-
-
-
-                # print("Player: ",victim.name," died at tick: ",d.current_tick)
-                # self.m_rounds[-1].update_player_position(victim.name,int(victim.position['x']), int(victim.position['y']), victim.view_angle, False,'Y')
 
         #Add callback events (calls function whenever event occurs in file)
         d.add_callback('tick_start', tick_start)
@@ -122,14 +118,14 @@ class Game:
         d.parse()
 
         #Close file
-        outFile.close()
         print("Finished loading game!")
-
-        # TODO: Sort players based on team!
-
-
-    def is_visible(player_ix, frame_ix):
-        return True
-
-    def is_dead(player_ix, frame_ix):
-        return True
+        
+        
+#Import folder of CSGO DEM files      
+def import_games_by_directory(directory):
+    game_list = []
+    for idx, filename in enumerate(os.listdir(directory)):
+        if filename.endswith(".dem"):
+            data = open(directory + "/" + filename, 'rb').read()
+            game_list.append(Game(idx,data))    
+    return game_list
