@@ -27,6 +27,7 @@ class Person:
 class Round:
     def __init__ (self, rid):
         self.m_rid = rid
+        self.players = []
 
 # Dumb queriable wrapper for games.
 class Game:
