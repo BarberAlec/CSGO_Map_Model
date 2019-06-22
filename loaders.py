@@ -13,14 +13,20 @@ class Person:
         self.m_team = team
 
         self.is_dead = False
+        self.dead_pos = None
 
         self.states = []
 
     def add_position(self, pos, spotted):
-        self.states.append((pos, spotted, self.is_dead))
-
-    def die(self):
+        if self.is_dead:
+            if not self.dead_pos: print('ERROR')
+            self.states.append((self.dead_pos, spotted, self.is_dead))
+        else:
+            self.states.append((pos, spotted, self.is_dead))
+        
+    def die(self, pos):
         self.is_dead = True
+        self.dead_pos = pos
 
 
 #Encapsulates parsed information from DEM file about each round, no interesting processing is conducted here.
@@ -104,7 +110,8 @@ class Game:
                 # Find player index
                 for p in self.m_rounds[-1].players:
                     if p.m_name == victim.name:
-                        p.die()
+                        pos = int(victim.position['x']), int(victim.position['y'])
+                        p.die(pos)
 
         #Add callback events (calls function whenever event occurs in file)
         d.add_callback('tick_start', tick_start)
