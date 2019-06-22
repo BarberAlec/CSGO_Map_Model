@@ -4,7 +4,7 @@ import numpy as np
 
 # Implemented animation using actual animation lib, now exports to mp4
 # for easier veiwing :)
-def __begin_animation(game_round, filename):
+def __begin_animation_no_heat(game_round, filename):
     num_frames = max([len(p.states) for p in game_round.players])
     num_players = len(game_round.players)
     stats = np.array([play.states for play in game_round.players])
@@ -23,7 +23,7 @@ def __begin_animation(game_round, filename):
     y=[0]*num_players
     
     # checks for spectators and others should have been conducted before this
-    team_c = ['cyan' if play.m_team == 'CT' else 'pink' for play in game_round.players]
+    team_c = ['blue' if play.m_team == 'CT' else 'red' for play in game_round.players]
 
     scat = plt.scatter(x,y,c=team_c,edgecolors='white')
     ani = animation.FuncAnimation(fig, __update_plot, frames=range(num_frames),
@@ -45,7 +45,16 @@ def __update_plot(i,data, team_c,scat):
     #TODO: Distinguish between dead players of opposing teams
     return scat,
     
+    
+def __begin_animation_with_heat(game_round, filename, model):
+    
+    
+    
 def AnimateRound(r,filename,model=None):
-    if not ()
-    __begin_animation(r,filename)
+    """Create mp4 animation of round
+    If model is specified, then predictive heatmapping will
+    be used, otherwise no heatmap will be used.
+    """
+    if not (model): __begin_animation_no_heat(r,filename)
+    else: __begin_animation_with_heat(r,filename,model)
     
