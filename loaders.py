@@ -20,7 +20,7 @@ class Person:
     def add_position(self, pos, spotted):
         if self.is_dead:
             if not self.dead_pos: print('ERROR')
-            self.states.append((self.dead_pos, spotted, self.is_dead))
+            self.states.append((self.dead_pos, False, self.is_dead))
         else:
             self.states.append((pos, spotted, self.is_dead))
         

@@ -37,19 +37,15 @@ def __update_plot(i,data, team_c,scat):
     scat.set_edgecolor(['black' if spot else 'white' for spot in data[:,i,1]])
     
     # Scatter does not support changing markers for individual points...
-    # These lines check rgb values to test what team a marker belongs to
     face_cols = team_c
     for idx in range(len(scat.get_offsets())):
         if data[idx,i,2]==True:
             face_cols[idx] = 'black'
-            
-    '''scat.set_facecolor(['blue' if dead and not (scat.get_facecolor()==1)[0][0] 
-                        else 'cyan' for dead in data[:,i,2]])
-    scat.set_facecolor(['red' if dead and (scat.get_facecolor()==1)[0][0] 
-                        else 'pink' for dead in data[:,i,2]])'''
     scat.set_facecolors(face_cols)
+    #TODO: Distinguish between dead players of opposing teams
     return scat,
     
-def AnimateRound(r,filename):
+def AnimateRound(r,filename,model=None):
+    if not ()
     __begin_animation(r,filename)
     
