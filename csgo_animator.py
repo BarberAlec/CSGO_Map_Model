@@ -55,7 +55,7 @@ def __update_plot(i,data, team_c,scat):
     
     
 def __begin_animation_with_heat(game_round, filename, model):
-    # Dont think this line is needed as new loaders method gives all players equal number of states now...
+    # Dont think this line is needed as new csgo-animators method gives all players equal number of states now...
     num_frames = max([len(p.states) for p in game_round.players])
     num_players = len(game_round.players)
     
@@ -73,7 +73,7 @@ def __begin_animation_with_heat(game_round, filename, model):
     fig = plt.figure(figsize=(7,7))
     
     #Load and display map (backgroud)
-    img = plt.imread("de_dust_map.png")
+    img = plt.imread("ASSETS/de_dust_map.png")
     plt.imshow(img, extent=[-2600,2100,-1200,3200])
     
     x=[0]*num_players
@@ -114,7 +114,7 @@ def __update_plot_with_heat(i,data,team_c,scat,model):
         if data[idx,i,2]==True:
             face_cols[idx] = 'black'
     scat.set_facecolors(face_cols)
-    plt_heat = plt.imshow(heat_map)
+    plt_heat = plt.imshow(heat_map,extent=(-2600.,2100.,-1200.,3200.),alpha=0.3)
     #TODO: Distinguish between dead players of opposing teams
     return scat,
     
