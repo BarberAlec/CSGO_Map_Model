@@ -5,8 +5,6 @@ from demoparser.demofile import DemoFile
 import matplotlib.pyplot as plt
 import time
 
-
-#Encapsulates all information about each individual player
 class Person:
     def __init__ (self, name, team):
         self.m_name = name
@@ -130,7 +128,7 @@ class Game:
         
         
 #Import folder of CSGO DEM files      
-def import_games_by_directory(directory):
+def import_by_directory(directory):
     game_list = []
     for idx, filename in enumerate(os.listdir(directory)):
         if filename.endswith(".dem"):
