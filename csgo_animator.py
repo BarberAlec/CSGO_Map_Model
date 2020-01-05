@@ -24,7 +24,7 @@ def __begin_animation_no_heat(game_round, filename):
     fig = plt.figure(figsize=(7,7))
     
     #Load and display map
-    img = plt.imread("Assets/de_dust_map.png")
+    img = plt.imread("ASSETS/de_dust_map.png")
     plt.imshow(img, extent=[-2600,2100,-1200,3200])
     
     x=[0]*num_players
