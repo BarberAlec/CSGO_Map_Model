@@ -23,7 +23,7 @@ def __begin_animation_no_heat(game_round, filename):
     # 7*7 Inch display
     fig = plt.figure(figsize=(7,7))
     
-    #Load and display map
+    # Load and display map
     img = plt.imread("ASSETS/de_dust_map.png")
     plt.imshow(img, extent=[-2600,2100,-1200,3200])
     
@@ -50,7 +50,7 @@ def __update_plot(i,data, team_c,scat):
         if data[idx,i,2]==True:
             face_cols[idx] = 'black'
     scat.set_facecolors(face_cols)
-    #TODO: Distinguish between dead players of opposing teams
+    # TODO: Distinguish between dead players of opposing teams
     return scat,
     
     
