@@ -1,0 +1,43 @@
+﻿Build started 22/06/2020 15:25:31.
+     1>Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\tests.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\tests.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ComputeCustomBuildOutput:
+         Creating directory "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\google\protobuf\compiler\cpp\".
+       CustomBuild:
+         Generating cpp_test_bad_identifiers.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_custom_options.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_embed_optimize_for.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_import.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_import_public.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_lite_imports_nonlite.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_mset.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_optimize_for.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+         Generating unittest_no_generic_services.pb.{h,cc}...
+         'Debug\protoc' is not recognized as an internal or external command,
+         operable program or batch file.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(151,5): error MSB6006: "cmd.exe" exited with code 9009.
+     1>Done Building Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\tests.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.14

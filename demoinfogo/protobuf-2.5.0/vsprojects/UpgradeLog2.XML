@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="protoc">
+</Property><Property Name="Solution File" Value="C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\protoc.sln">
+</Property><Property Name="Date" Value="Monday 22 June 2020">
+</Property><Property Name="Time" Value="15:21:18">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="protoc" Source="protoc.vcproj" Description="Converting project file 'C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\protoc.vcproj'.">
+</Event><Event ErrorLevel="1" Project="protoc" Source="protoc.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="1" Project="protoc" Source="protoc.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="protoc" Source="protoc.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="protoc" Source="protoc.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="protoc" Source="protoc.vcproj" Description="Done converting to new project file 'C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\protoc.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="protoc" Source="protoc.vcproj" Description="Converted">
+</Event></UpgradeLog>

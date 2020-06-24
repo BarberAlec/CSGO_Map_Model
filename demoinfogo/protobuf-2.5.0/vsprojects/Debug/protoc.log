@@ -1,0 +1,30 @@
+﻿Build started 22/06/2020 15:25:09.
+     1>Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\protoc.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\protoc.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../src /I. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\google\protobuf\compiler\main.cc /wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 
+         main.cc
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\protoc.exe.embed.manifest.res" Debug\protoc_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\protoc.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\protoc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\protoc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\protoc.lib" /MACHINE:X86 Debug\protoc.exe.embed.manifest.res
+         Debug\main.obj
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall google::protobuf::compiler::CommandLineInterface::~CommandLineInterface(void)" (??1CommandLineInterface@compiler@protobuf@google@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall google::protobuf::compiler::cpp::CppGenerator::~CppGenerator(void)" (??1CppGenerator@cpp@compiler@protobuf@google@@UAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall google::protobuf::compiler::java::JavaGenerator::~JavaGenerator(void)" (??1JavaGenerator@java@compiler@protobuf@google@@UAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall google::protobuf::compiler::python::Generator::~Generator(void)" (??1Generator@python@compiler@protobuf@google@@UAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: int __thiscall google::protobuf::compiler::CommandLineInterface::Run(int,char const * const * const)" (?Run@CommandLineInterface@compiler@protobuf@google@@QAEHHQBQBD@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall google::protobuf::compiler::python::Generator::Generator(void)" (??0Generator@python@compiler@protobuf@google@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall google::protobuf::compiler::CommandLineInterface::RegisterGenerator(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class google::protobuf::compiler::CodeGenerator *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?RegisterGenerator@CommandLineInterface@compiler@protobuf@google@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVCodeGenerator@234@0@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall google::protobuf::compiler::java::JavaGenerator::JavaGenerator(void)" (??0JavaGenerator@java@compiler@protobuf@google@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall google::protobuf::compiler::CommandLineInterface::RegisterGenerator(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class google::protobuf::compiler::CodeGenerator *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?RegisterGenerator@CommandLineInterface@compiler@protobuf@google@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0PAVCodeGenerator@234@0@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall google::protobuf::compiler::cpp::CppGenerator::CppGenerator(void)" (??0CppGenerator@cpp@compiler@protobuf@google@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall google::protobuf::compiler::CommandLineInterface::AllowPlugins(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?AllowPlugins@CommandLineInterface@compiler@protobuf@google@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall google::protobuf::compiler::CommandLineInterface::CommandLineInterface(void)" (??0CommandLineInterface@compiler@protobuf@google@@QAE@XZ) referenced in function _main
+     1>Debug\protoc.exe : fatal error LNK1120: 12 unresolved externals
+     1>Done Building Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\protoc.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.70

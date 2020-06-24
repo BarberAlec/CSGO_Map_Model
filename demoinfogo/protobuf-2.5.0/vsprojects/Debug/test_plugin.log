@@ -1,0 +1,40 @@
+﻿Build started 22/06/2020 15:25:26.
+     1>Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\test_plugin.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\test_plugin.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../src /I. /I../gtest/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VARIADIC_MAX=10 /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\google\protobuf\compiler\test_plugin.cc ..\src\google\protobuf\compiler\mock_code_generator.cc ..\src\google\protobuf\testing\file.cc /wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 
+         file.cc
+         mock_code_generator.cc
+         test_plugin.cc
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\test_plugin.exe.embed.manifest.res" Debug\test_plugin_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\test_plugin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\test_plugin.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\test_plugin.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\test_plugin.lib" /MACHINE:X86 Debug\test_plugin.exe.embed.manifest.res
+         Debug\test_plugin.obj
+         Debug\mock_code_generator.obj
+         Debug\file.obj
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\gtest\msvc\protobuf\Debug\gtestd.lib"
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\libprotobuf.lib"
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\libprotoc.lib"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\test_plugin.exe.embed.manifest" /manifest Debug\test_plugin.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\test_plugin.exe.embed.manifest.res" Debug\test_plugin_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\test_plugin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\test_plugin.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\test_plugin.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\test_plugin.lib" /MACHINE:X86 Debug\test_plugin.exe.embed.manifest.res
+         Debug\test_plugin.obj
+         Debug\mock_code_generator.obj
+         Debug\file.obj
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\gtest\msvc\protobuf\Debug\gtestd.lib"
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\libprotobuf.lib"
+         "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\libprotoc.lib"
+         test_plugin.vcxproj -> C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\Debug\test_plugin.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\test_plugin.unsuccessfulbuild".
+         Touching "Debug\test_plugin.lastbuildstate".
+     1>Done Building Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\protobuf-2.5.0\protobuf-2.5.0\vsprojects\test_plugin.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.63

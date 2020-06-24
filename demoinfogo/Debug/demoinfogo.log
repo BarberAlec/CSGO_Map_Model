@@ -1,0 +1,42 @@
+﻿Build started 23/06/2020 21:06:10.
+     1>Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\demoinfogo.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\demoinfogo.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+         Running Protocol Buffer Compiler on cstrike15_usermessages_public.proto...
+         Running Protocol Buffer Compiler on netmessages_public.proto...
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"protobuf-2.5.0\src\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _SCL_SECURE_NO_WARNINGS /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt demofiledump.cpp demofilepropdecode.cpp demoinfogo.cpp generated_proto\cstrike15_usermessages_public.pb.cc generated_proto\netmessages_public.pb.cc
+         netmessages_public.pb.cc
+         cstrike15_usermessages_public.pb.cc
+         demofiledump.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         demoinfogo.cpp
+         demofilepropdecode.cpp
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\Debug\demoinfogo.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "protobuf-2.5.0\vsprojects\Debug\libprotobuf.lib" /MANIFEST /ManifestFile:"Debug\demoinfogo.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\Debug\demoinfogo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\Debug\demoinfogo.lib" /MACHINE:X86 Debug\demoinfogo.exe.embed.manifest.res
+         Debug\demofile.obj
+         Debug\demofilebitbuf.obj
+         Debug\demofiledump.obj
+         Debug\demoinfogo.obj
+         Debug\demofilepropdecode.obj
+         Debug\cstrike15_usermessages_public.pb.obj
+         Debug\netmessages_public.pb.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\demoinfogo.exe.embed.manifest" /manifest Debug\demoinfogo.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         demoinfogo.vcxproj -> C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\Debug\demoinfogo.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\demoinfogo.unsuccessfulbuild".
+         Touching "Debug\demoinfogo.lastbuildstate".
+     1>Done Building Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\demoinfogo.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.47
