@@ -100,6 +100,8 @@ ipython_config.py
 # Demo files
 CSGO_DEM_FILES
 CSGO_DEM_FILES_test
+CSGO_PARSED_FILES
+CSGO_PARSED_ROUNDS
 
 *.opensdf
 
