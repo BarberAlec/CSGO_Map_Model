@@ -1,47 +1,21 @@
-import zipfile
-import os
-import shutil
+from csgo import csgo, game_round
+'''
+Orginal python package is no longer supported, now using a C++ package (https://github.com/ValveSoftware/csgo-demoinfo) by Valve.
 
-def unzipDemoFiles(directory):
-    '''
-    Takes all the zip files in the given directory, extracts them and pulls the demo into the main folder
-    '''
+All parsing of demo files is done by this package (modified somewhat by me). This file calls the parser for every file in the CSGO_DEM_FILES
+and puts the result in CSGO_PARSED_FILES.
+'''
 
-    for idx, filename in enumerate(os.listdir(directory)):
-        # Unzip
-        if filename.endswith(".zip"):
-            new_folder_file = os.path.join(directory,filename.split('.')[0])
-            with zipfile.ZipFile(os.path.join(directory,filename), 'r') as zip_ref:
-                zip_ref.extractall(new_folder_file)
-        else:
-            continue
-        
-        # Take demo out of folder
-        source_demo_path = os.path.join(new_folder_file,filename.split('.')[0]+'.dem')
-        dest_demo_path = directory
-
-        shutil.move(source_demo_path, dest_demo_path)  
-
-        # delete zip folder (now empty)
-        os.removedirs(new_folder_file)
-
-
-def parseDemos(directory):
-    '''
-    Iterates through demo files in given directory, parsing each and creating an assocaited CSV
-    '''
-
-    # Load demos one at a time
-    for idx, filename in enumerate(os.listdir(directory)):
-        if filename.endswith(".dem"):
-            file_dir = os.path.join(directory,filename)
-            # Launch executable 
 
 def main():
-    directory = 'CSGO_DEM_FILES'
+    a = csgo()
 
-    unzipDemoFiles(directory)
-
+    # Unzip and Parse all demos
+    # a.unzipDemoFiles(directory)
+    # a.parseDemos('CSGO_DEM_FILES_test')
+    
+    #a.printRound('esea_match_16104611.csv', round_num=0)
+    a.loadGames(source_directory='esea_match_16104611.csv')
 
 if __name__ == '__main__':
     main()
