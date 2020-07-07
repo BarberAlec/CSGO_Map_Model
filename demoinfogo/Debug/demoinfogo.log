@@ -1,4 +1,4 @@
-﻿Build started 23/06/2020 21:06:10.
+﻿Build started 28/06/2020 19:01:10.
      1>Project "C:\Users\alec\Documents\CSGO_Map_Model\demoinfogo\demoinfogo.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\demoinfogo.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -39,4 +39,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.47
+Time Elapsed 00:00:04.95

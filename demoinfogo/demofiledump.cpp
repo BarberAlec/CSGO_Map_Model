@@ -391,8 +391,21 @@ bool ShowPlayerInfo( const char *pField, int nIndex, bool bShowDetails = true, b
 				PropEntry *pXYProp = pEntity->FindProp( "m_vecOrigin" );
 				PropEntry *pZProp = pEntity->FindProp( "m_vecOrigin[2]" );
 				PropEntry *spot = pEntity->FindProp( "m_bSpotted" );
+				PropEntry *health = pEntity->FindProp( "m_iHealth" );
 				if (spot){
 					std::cout << spot->m_pPropValue->m_value.m_int <<',';
+				}
+				else
+				{
+					std::cout << 0 <<',';
+				}
+				if (health)
+				{
+					std::cout << health->m_pPropValue->m_value.m_int << ',';
+				}
+				else
+				{
+					std::cout << 0 << ',';
 				}
 				
 				//printf("%i,",tester->m_pPropValue->m_value.m_int);
@@ -414,19 +427,19 @@ bool ShowPlayerInfo( const char *pField, int nIndex, bool bShowDetails = true, b
 						std::cout<<  pXYProp->m_pPropValue->m_value.m_vector.x<<','<< pXYProp->m_pPropValue->m_value.m_vector.y<<','<<pZProp->m_pPropValue->m_value.m_float<<',';
 					}
 				}
-				PropEntry *pAngle0Prop = pEntity->FindProp( "m_angEyeAngles[0]" );
-				PropEntry *pAngle1Prop = pEntity->FindProp( "m_angEyeAngles[1]" );
-				if ( pAngle0Prop && pAngle1Prop )
-				{
-					if ( bCSV )
-					{
-						printf( ", %f, %f", pAngle0Prop->m_pPropValue->m_value.m_float, pAngle1Prop->m_pPropValue->m_value.m_float );
-					}
-					else
-					{
+				//PropEntry *pAngle0Prop = pEntity->FindProp( "m_angEyeAngles[0]" );
+				//PropEntry *pAngle1Prop = pEntity->FindProp( "m_angEyeAngles[1]" );
+				//if ( pAngle0Prop && pAngle1Prop )
+				//{
+				//	if ( bCSV )
+				//	{
+						//printf( ", %f, %f", pAngle0Prop->m_pPropValue->m_value.m_float, pAngle1Prop->m_pPropValue->m_value.m_float );
+				//	}
+				//	else
+				//	{
 						//printf( "  facing: pitch:%f, yaw:%f\n", pAngle0Prop->m_pPropValue->m_value.m_float, pAngle1Prop->m_pPropValue->m_value.m_float );
-					}
-				}
+				//	}
+				//}
 				PropEntry *pTeamProp = pEntity->FindProp( "m_iTeamNum" );
 				if ( pTeamProp )
 				{
@@ -437,7 +450,19 @@ bool ShowPlayerInfo( const char *pField, int nIndex, bool bShowDetails = true, b
 					else
 					{
 						//printf( "  team: %s\n", ( pTeamProp->m_pPropValue->m_value.m_int == 2 ) ? "T" : "CT" );
-						std::cout << (( pTeamProp->m_pPropValue->m_value.m_int == 2 ) ? "T" : "CT") << std::endl;
+						//std::cout << (( pTeamProp->m_pPropValue->m_value.m_int == 2 ) ? "T" : "CT") << std::endl;
+						if (pTeamProp->m_pPropValue->m_value.m_int == 2)
+						{
+							std::cout << "T" << std::endl;
+						}
+						else if (pTeamProp->m_pPropValue->m_value.m_int == 1)
+						{
+							std::cout << "None" << std::endl;
+						}
+						else
+						{
+							std::cout << "CT" << std::endl;
+						}
 					}
 				}
 				else
@@ -519,9 +544,13 @@ void ParseGameEvent( const CSVCMsg_GameEvent &msg, const CSVCMsg_GameEventList::
 					HandlePlayerDeath( msg, pDescriptor );
 				}
 
-				if ( g_bDumpGameEvents )
+				//if ( g_bDumpGameEvents )
+				//{
+				//	printf( "%s\n{\n", pDescriptor->name().c_str() );
+				//}
+				if (pDescriptor->name().compare("round_start") == 0)
 				{
-					printf( "%s\n{\n", pDescriptor->name().c_str() );
+					std::cout << "ROUND START,"<< s_nCurrentTick <<",,,,,," << std::endl;
 				}
 				int numKeys = msg.keys().size();
 				for ( int i = 0; i < numKeys; i++ )
@@ -1708,7 +1737,7 @@ void CDemoFileDump::DoDump()
 	SurpessAllOutputs();
 	bool demofinished = false;
 
-	std::cout << "name,tick,x,y,z,team" << std::endl;
+	std::cout << "name,tick,spot,dead,x,y,z,team" << std::endl;
 	while ( !demofinished )
 	{
 		int				tick = 0;
